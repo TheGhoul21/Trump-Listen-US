@@ -1,11 +1,16 @@
 import click;
 from flask import Flask, render_template
+#from models import User
 
 app = Flask(__name__, static_folder='templates/assets')
 
 @app.route("/")
 def index():
     return render_template('index.html', username= 'Mario')
+
+@app.route("/facts")
+def facts():
+    return render_template('gallery.html')
 
 @app.route('/user/<username>')
 def show_user_profile(username):
