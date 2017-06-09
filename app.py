@@ -10,7 +10,15 @@ def index():
 
 @app.route("/facts")
 def facts():
-    return render_template('gallery.html')
+    return render_template('facts.html')
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
 
 @app.route('/user/<username>')
 def show_user_profile(username):
