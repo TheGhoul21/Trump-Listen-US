@@ -26,10 +26,10 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a {%- if request.path == "/" %} class="is-active"{% endif %} href="/">HOME</a></li>
-                    <li><a {%- if request.path == "/about" %} class="is-active"{% endif %} href="/about">ABOUT</a></li> 
-                    <li><a {%- if request.path == "/facts" %} class="is-active"{% endif %} href="/facts">FACTS</a></li>
-                    <li><a {%- if request.path == "/contact" %} class="is-active"{% endif %} href="/contact">CONTACT</a></li>
+                    <li><a {%- if request.url_rule.endpoint == "index" %} class="is-active"{% endif %} href="/">HOME</a></li>
+                    <li><a {%- if request.url_rule.endpoint == "about" %} class="is-active"{% endif %} href="/about">ABOUT</a></li> 
+                    <li><a {%- if request.url_rule.endpoint == "facts" %} class="is-active"{% endif %} href="/facts">FACTS</a></li>
+                    <li><a {%- if request.url_rule.endpoint == "contact" %} class="is-active"{% endif %} href="/contact">CONTACT</a></li>
 
                   </ul>
 
